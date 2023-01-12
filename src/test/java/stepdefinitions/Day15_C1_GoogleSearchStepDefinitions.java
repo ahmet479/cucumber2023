@@ -28,5 +28,32 @@ public class Day15_C1_GoogleSearchStepDefinitions {
     public void kullanici_application_kapatir() {
         Driver.closeDriver();
     }
+    @Given("kullanici caydanlik'i arar")
+    public void kullanici_caydanlik_i_arar() {
+
+    }
+    @Then("kullanici sonuclarda caydanlik oldugunu verify eder")
+    public void kullanici_sonuclarda_caydanlik_oldugunu_verify_eder() {
+
+    }
+    @Given("kullanici cicek'i arar")
+    public void kullanici_cicek_i_arar() {
+
+    }
+    @Then("kullanici sonuclarda cicek oldugunu verify eder")
+    public void kullanici_sonuclarda_cicek_oldugunu_verify_eder() {
+
+    }
+
+
+
+    @Given("kullanici volkswagen'i arar")
+    public void kullanici_volkswagen_i_arar() {
+
+    }
+    @Then("kullanici sonuclarda volkswagen oldugunu verify eder")
+    public void kullanici_sonuclarda_volkswagen_oldugunu_verify_eder() {
+
+    }
 
 }

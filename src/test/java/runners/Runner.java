@@ -9,10 +9,10 @@ import org.junit.runner.RunWith;
 //Calistirmak istedigim feature file belirtiyorum
 @CucumberOptions(
 
-         features = " ./src/test/resources/firstfeaturefile.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
+         features = "./src/test/resources/features/firstfeaturefile.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
          tags = "@google_search",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
-         dryRun = false  //opsiyoneldir
+         dryRun = true  //opsiyoneldir
 )
 public class Runner {
 }
