@@ -45,20 +45,15 @@ public class Day15_C1_GoogleSearchStepDefinitions {
     @Then("kullanici sonuclarda cicek oldugunu verify eder")
     public void kullanici_sonuclarda_cicek_oldugunu_verify_eder() {
         Assert.assertTrue("cicek", Driver.getDriver().getTitle().contains("cicek"));
-
     }
-
     @Given("kullanici volkswagen'i arar")
     public void kullanici_volkswagen_i_arar() {
         googlePage.googleSearchBox.sendKeys("volkswagen" + Keys.ENTER);
-
     }
     @Then("kullanici sonuclarda volkswagen oldugunu verify eder")
     public void kullanici_sonuclarda_volkswagen_oldugunu_verify_eder() {
-        boolean title = Driver.getDriver().getPageSource().contains("volkswagen");
-        Assert.assertTrue(title);
+    Assert.assertTrue("volkswagen", Driver.getDriver().getTitle().contains("volkswagen"));
     }
-
     //paramatirized kullanildi
     @Given("kullanici {string} arar")
     public void kullanici_arar(String string) {

@@ -5,7 +5,7 @@
     Scenario Outline:
       Given kullanici google sayfasindadir
       And kullanici "<urun>" arar
-      Then kullanici sonuclarda  "<urun>" oldugunu verify eder
+      Then kullanici sonuclarda "<urun>" oldugunu verify eder
       Then kullanici application kapatir
 
 

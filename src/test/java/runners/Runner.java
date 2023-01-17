@@ -9,14 +9,13 @@ import org.junit.runner.RunWith;
 //Calistirmak istedigim feature file belirtiyorum
 @CucumberOptions(
 
-         features = "src/test/resources/Day16_C4_scenario_outline_2.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
+         features = "src/test/resources/Sprint_13.05/Eagles/Day16_C5_US100450_kullanici_manager_kullanici_bilgilerini_kullanarak_login_yapmali.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
-         tags = "@scenario_outline_2_google_arama",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
+         tags = "@manager_login_test",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
          dryRun = true  //opsiyoneldir
-        //google_search
-        //parameterize_google_arama
 )
-public class Runner {
+        public class Runner {
+
 }
 /*
 Runner : feature file'lari calistirmak icin kullanilir
