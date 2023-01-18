@@ -14,7 +14,7 @@ public class Day16_C6_LoginStepDefinitions {
     DefaultPage defaultPage = new DefaultPage();
     @Given("kullanici application sayfasindadir")
     public void kullanici_application_sayfasindadir() {
-        Driver.getDriver().get(ConfigReader.getProperty("app_url_login"));
+        Driver.getDriver().get(ConfigReader.getProperty("qa_url_login"));
         try{
             Thread.sleep(1000);
             loginPage.advancedLink.click();
@@ -42,15 +42,16 @@ public class Day16_C6_LoginStepDefinitions {
         Assert.assertEquals(defaultPage.hotelManagementLink.getText(), string);
     }
     @Given("kullanici admin id {string} girer")
-    public void kullanici_admin_id_girer(String string) {
-      loginPage.username.sendKeys();
+    public void kullanici_admin_id_girer(String kullaniciadi) {
+      loginPage.username.sendKeys(kullaniciadi);
     }
     @Given("kullanici admin sifre {string} girer")
-    public void kullanici_admin_sifre_girer(String string) {
-       loginPage.password.sendKeys();
+    public void kullanici_admin_sifre_girer(String sifre) {
+       loginPage.password.sendKeys(sifre);
     }
     @When("kullanici login button'una click eder")
-    public void kullanici_login_button_una_click_eder() {
+    public void kullanici_login_button_una_click_eder() throws InterruptedException {
+        Thread.sleep(2000);
       loginPage.loginButton.click();
     }
     @Then("default page'in displayed oldugunu verify eder")

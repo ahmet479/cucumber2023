@@ -9,10 +9,10 @@ import org.junit.runner.RunWith;
 //Calistirmak istedigim feature file belirtiyorum
 @CucumberOptions(
 
-         features = "src/test/resources/Sprint_13.05/Eagles/Day16_C5_US100450_kullanici_manager_kullanici_bilgilerini_kullanarak_login_yapmali.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
+         features = "src/test/resources/Sprint_13.06/Eagles/Day17_C6_US100451_oda_rezervasyonu.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
-         tags = "@manager_login_test",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
-         dryRun = true  //opsiyoneldir
+         tags = "@room_rezervasyonu",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
+         dryRun = false  //opsiyoneldir
 )
         public class Runner {
 
