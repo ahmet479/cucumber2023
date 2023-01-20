@@ -6,10 +6,17 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 
-//Calistirmak istedigim feature file belirtiyorum
+// calistirmak istegim feature file belirtiyorum
 @CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+        },
 
-         features = "src/test/resources/Sprint_13.06/Eagles/Day17_C6_US100451_oda_rezervasyonu.feature", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
+         features = "src/test/resources/features", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
          tags = "@room_rezervasyonu",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
          dryRun = false  //opsiyoneldir

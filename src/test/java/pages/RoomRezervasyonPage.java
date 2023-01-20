@@ -12,53 +12,52 @@ public class RoomRezervasyonPage {
     @FindBy(xpath = "//span[@class='hidden-480']")
     public WebElement addRoomReservationButton;
 
-    @FindBy(xpath = "IDUser")
+    @FindBy(id="IDUser")
     public WebElement idUser;
 
-    @FindBy(xpath = "IDHotelRoom")
+    @FindBy(id="IDHotelRoom")
     public WebElement idHotelRoom;
 
-    @FindBy(xpath = "Price")
+    @FindBy(id="Price")
     public WebElement price;
 
-    @FindBy(xpath = "DateStart")
+    @FindBy(id = "DateStart")
     public WebElement dateStart;
 
-    @FindBy(xpath = "DateEnd")
+    @FindBy(id = "DateEnd")
     public WebElement dateEnd;
 
-    @FindBy(xpath = "AdultAmount")
+    @FindBy(id = "AdultAmount")
     public WebElement adultAmount;
 
-    @FindBy(xpath = "ChildrenAmount")
+    @FindBy(id = "ChildrenAmount")
     public WebElement childrenAmount;
 
-    @FindBy(xpath = "ContactNameSurname")
+    @FindBy(id = "ContactNameSurname")
     public WebElement contactNameSurname;
 
-    @FindBy(xpath = "ContactPhone")
+    @FindBy(id = "ContactPhone")
     public WebElement contactPhone;
 
-    @FindBy(xpath = "ContactEmail")
+    @FindBy(id = "ContactEmail")
     public WebElement contactEmail;
 
-    @FindBy(xpath = "Notes")
+    @FindBy(id = "Notes")
     public WebElement notes;
 
-    @FindBy(xpath = "Approved")
-    public WebElement approved;
+    @FindBy(id = "Approved")
+    public WebElement isApproved;
 
-    @FindBy(xpath = "IsPaid")
+    @FindBy(id = "IsPaid")
     public WebElement isPaid;
 
-    @FindBy(xpath = "btnSubmit")
-    public WebElement save;
+    @FindBy(id = "btnSubmit")
+    public WebElement saveButton;
 
-    @FindBy(xpath ="//div[@class='bootbox-body']")
-    public WebElement message;
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement successMessage;
 
     @FindBy(xpath = "//button[@data-bb-handler='ok']")
-    public WebElement ok;
-
+    public WebElement okButton;
 
 }
