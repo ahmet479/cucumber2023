@@ -7,6 +7,10 @@ package stepdefinitions;
         import pages.LoginPage;
         import utilities.ConfigReader;
         import utilities.Driver;
+        import utilities.ExcelUtil;
+
+        import java.util.List;
+        import java.util.Map;
 
 public class Day16_C6_LoginStepDefinitions {
 
@@ -57,6 +61,58 @@ public class Day16_C6_LoginStepDefinitions {
     @Then("default page'in displayed oldugunu verify eder")
     public void default_page_in_displayed_oldugunu_verify_eder() {
 
-    }
 
+                }
+    ExcelUtil excelUtil;
+    List<Map<String, String>> testData;
+
+    public void setUp() throws InterruptedException {
+        Driver.getDriver().get(ConfigReader.getProperty("qa_url_login"));
+        loginPage = new LoginPage();
+        Thread.sleep(1000);
+        try{
+            Thread.sleep(1000);
+            loginPage.advancedLink.click();
+            Thread.sleep(1000);
+            loginPage.proceedLink.click();
+            Thread.sleep(1000);
+        }catch (Exception e){
+            System.out.println("Advanced Link ve Proceed Link gorunmedi");
+        }
+    }
+    @Given("kullanici applicationa excel admin ile login yapar")
+    public void kullanici_applicationa_excel_admin_ile_login_yapar() throws InterruptedException {
+        String path ="./src/test/resources/testdata/smoketestdata.xlsx";
+        String sheetName="admin_login_info";
+        excelUtil= new ExcelUtil(path,sheetName);
+
+        testData=excelUtil.getDataList();
+        System.out.println(testData);//[{password=Arcane123!, username=admin1}]
+
+        for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
+            setUp();//login in each loop
+            loginPage.username.sendKeys(eachData.get("username"));//admin1
+            loginPage.password.sendKeys(eachData.get("password"));//Arcane123!
+            loginPage.loginButton.click();
+        }
+
+
+    }
+    @Given("kullanici applicationa excel manajer ile login yapar")
+    public void kullanici_applicationa_excel_manajer_ile_login_yapar() throws InterruptedException {
+        String path ="./src/test/resources/testdata/smoketestdata.xlsx";
+        String sheetName="admin_login_info";
+        excelUtil= new ExcelUtil(path,sheetName);
+
+        testData=excelUtil.getDataList();
+        System.out.println(testData);//
+
+        for(Map<String,String> eachData : testData ){//eachData represent each username-password pairs
+            setUp();//login in each loop
+            loginPage.username.sendKeys(eachData.get("username"));//
+            loginPage.password.sendKeys(eachData.get("password"));//
+            loginPage.loginButton.click();
+        }
+
+    }
 }

@@ -14,15 +14,15 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         },
 
-         features = "src/test/resources/features", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
+         features = "src/test/resources", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
-         tags = "@room_rezervasyonu",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
+         tags = "@excel_otomasyon",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
          dryRun = false  //opsiyoneldir
 )
         public class Runner {
-
 }
 /*
 Runner : feature file'lari calistirmak icin kullanilir

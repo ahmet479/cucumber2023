@@ -9,6 +9,7 @@ import pages.LoginPage;
 import pages.RoomRezervasyonPage;
 
 import java.util.List;
+import java.util.Map;
 
 public class Day17_C7_Room_Rezervasyon_Step_Definitions {
 
@@ -18,6 +19,7 @@ public class Day17_C7_Room_Rezervasyon_Step_Definitions {
 
     @Given("kullanici  manager kullanici bilgilerini girer")
     public void kullanici_manager_kullanici_bilgilerini_girer(DataTable kullaniciBilgileri) {
+      /*
         List<String> menajerKullaniciBilgileri = kullaniciBilgileri.row(1);
         System.out.println(menajerKullaniciBilgileri);
         System.out.println(menajerKullaniciBilgileri.get(0));
@@ -25,6 +27,39 @@ public class Day17_C7_Room_Rezervasyon_Step_Definitions {
 
         loginPage.username.sendKeys(menajerKullaniciBilgileri.get(0));
         loginPage.password.sendKeys(menajerKullaniciBilgileri.get(1));
+      */
+      //datayi  List<List<String>> olarak alma
+        List<List<String>> manajerBilgileri2 = kullaniciBilgileri.asLists();
+       /*
+        System.out.println(manajerBilgileri2);
+        for (List<String> herBirBilgi : manajerBilgileri2){
+            System.out.println(herBirBilgi);
+            System.out.println(herBirBilgi.get(0));
+            System.out.println(herBirBilgi.get(1));
+
+            if (!herBirBilgi.get(0).equals("username")) {
+                loginPage.username.sendKeys(herBirBilgi.get(0));
+                loginPage.username.sendKeys(herBirBilgi.get(1));
+            }
+            }
+
+
+        //datayi lambda ile alma
+        manajerBilgileri2.stream().filter(herBilgi ->!(herBilgi.get(0).equals("username"))).forEach(herBilgi->{
+            loginPage.username.sendKeys(herBilgi.get(0));
+            loginPage.username.sendKeys(herBilgi.get(1));
+        });
+
+        */
+        //datayi List<Map<String, String>> alma
+        List<Map<String, String>> manajerBilgileri3 = kullaniciBilgileri.asMaps(String.class, String.class);
+        System.out.println(manajerBilgileri3);
+        for (Map<String, String> herBirBilgi : manajerBilgileri3){
+            System.out.println(herBirBilgi);
+
+            loginPage.username.sendKeys(herBirBilgi.get("username"));
+            loginPage.password.sendKeys(herBirBilgi.get("password"));
+        }
     }
 
     @Given("kullanıcı oda rezervasyon sayfasını yönlendirilir")
@@ -87,8 +122,5 @@ public class Day17_C7_Room_Rezervasyon_Step_Definitions {
         Assert.assertTrue(roomRezervasyonPage.successMessage.getText().contains("RoomReservation was inserted successfully"));
         roomRezervasyonPage.okButton.click();
     }
-    @Then("screenshot yap")
-    public void screenshot_yap(){
 
-    }
 }

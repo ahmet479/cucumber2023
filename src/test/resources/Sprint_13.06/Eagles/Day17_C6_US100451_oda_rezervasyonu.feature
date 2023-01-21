@@ -44,4 +44,6 @@ Feature: FE1009_room_rezervasyon
 
     And kullanıcı save button'una click eder
     Then screenshot yap
+
     Then kullanıcı success mesajını verify eder
+    Then kullanici application kapatir
