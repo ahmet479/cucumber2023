@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
 
          features = "src/test/resources", // ZORUNLU ==>Feature dosyanin pathini girmemiz lazim
          glue = "stepdefinitions",  //ZORUNLU =>stepdefinitions adresi(path)i
-         tags = "@excel_otomasyon",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
+         tags = "@data",   // hangi feature file kosmali onu belirtiyoruz =>Eger tags kullanmaz isek Runner tum feature run eder
          dryRun = false  //opsiyoneldir
 )
         public class Runner {

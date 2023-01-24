@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt",
         },
 
-        features = "src/test/resources/features",
+        features = "src/test/resources",
         glue = "stepdefinitions",
         tags = "@regression",
         dryRun = false
