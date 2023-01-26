@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc59bf06-ad3d-44ec-a73d-3ea1b8411689" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/OdevDatatabesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Odev_Step_Definition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/odev_scenario_3.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Day19_C10_DataTablesStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/StaleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Odev/Day19_C9_kullanici_yeni_data_ile_applicationa_giris_yapmali.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/extent-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/testdata/data_tables_workbook.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/RegressionTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/RegressionTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/SmokeTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/SmokeTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/firstfeaturefile.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/firstfeaturefile.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OdevDatatabesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DataTablesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/Odev_Step_Definition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata/odev_scenario_3.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <recent name="C:\Users\RANDABERG\IdeaProjects\cucumber2023\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner">
+  <component name="RunManager" selected="JUnit.Runner">
     <configuration name="Feature: Day16_C5_US100450_kullanici_manager_kullanici_bilgilerini_kullanarak_login_yapmali" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Sprint_13.05/Eagles/Day16_C5_US100450_kullanici_manager_kullanici_bilgilerini_kullanarak_login_yapmali.feature" />
@@ -147,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.Runner" />
+        <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.SmokeTestRunner" />
         <item itemvalue="JUnit.FailedScenarioRunner" />
         <item itemvalue="Cucumber Java.Feature: Day16_C5_US100450_kullanici_manager_kullanici_bilgilerini_kullanarak_login_yapmali" />
