@@ -10,14 +10,12 @@ public class Read_Step_Definitions {
     @Given("user connects to the database")
     public void user_connects_to_the_database() {
         DBUtils.createConnection();
-
     }
     @Given("gets the {string} from {string} table")
     public void gets_the_from_table(String sutun, String table) {
         String sql = "Select " + sutun + " from "+ table ;
         DBUtils.executeQuery(sql);
     }
-
     @Given("user reads all of the {string} column")
     public void user_reads_all_of_the_column(String column) throws SQLException {
 
